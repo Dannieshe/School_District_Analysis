@@ -1,32 +1,39 @@
-# Election_Analysis
+# School_District_Analysis
 
-## Project Overview
-The Colorado Board of Elections has tasked me with auditing the Congressional election.
+# Overview 
+In light of possoble grade tampering at Thomas High School, a new analysis has been requested. It was asked that we remove the 9th grade math and reading scores and rerun the analysis to acess the difference in student performance.
 
- 1. Tally the number of votes cast.
- 2. Establish a list of candidates that recieved votes.
- 3. Calculate the number of votes and percentage of votes placed, by county.
- 4. Establish which county had the highest turnout and the amount of votes placed in said county.
- 5. Calculate the number of votes and percentage of votes each candidate recieved.
- 6. Ascertain the winner based on the most votes recieved.
+-How is the district summary affected?
+-How is the school summary affected?
+-How does replacing the ninth graders’ math and reading scores affect Thomas High School’s performance relative to the other schools?
+-How does replacing the ninth-grade scores affect the following:
+ -Math and reading scores by grade
+ -Scores by school spending
+ -Scores by school size
+ -Scores by school type
 
-## Rescources
--Data Source: Election_analysis.csv
--Software: Python 3.10.1, Vs Code 1.63.1
+## Resources
+-Data Source: schools_complete.csv
+-Data Source: students_complete.csv
+-Sofware: Jupyter Notebook 6.4.5
+-Library: Pandas
+-Library: Numpy
+-Language: Python 3.10.1
+## Results: 
 
-## Audit Results
-- 369,711 total votes were cast in this election.
-- The candidates were:
-  -Charles Casper Stockham
-  -Diana DeGette
-  -Raymon Anthony
-- The votes and percentage of votes by county are as follows:
-  - Jefferson: 10.5% (38,855)
-  - Denver: 82.8% (306,055)
-  - Arapahoe: 6.7% (24,801)
-- The county with the largest vote turn out was Denver, with a total of 306,055 votes.
-- The votes and percentage of votes by candidate are as follows:
-  - Charles Casper Stockham: 23.0% (85,213)  
-  - Diana DeGette: 73.8% (272,892)
-  - Raymon Anthony Doane: 3.1% (11,606) 
-- The winner of the election was Diana Degette with 272,892 votes and 73.8% of the total votes placed. 
+After the nullifiction of the 9th grade scores, the district summary remained relatively unchanged. Since the 9th grade population at Thomas High School is under 500 students, and the district population is almost 40,000, removal of the grades is rather insignificant to that data. 
+Replacing the 9th grade scores with NaN dropped the schools overall passing percentage down significantly from 90% to 65%.
+Even though the overall percentage dropped for Thomas High, after removing the 9th grade from the data frame, Thomas High remains second in the district.
+After removing Thomas's 9th grade scores we see that:
+  -The math and reading scores by grade are unaffected with the exception of Thomas high.
+  -We can also that the schools with the least budget per student have some of the highest overall passing scores. While the schools with the highest budget per student have the lowest overall passing scores in the district.
+  -The large schools had the worst overall score, while the small and medium schools had similar overall passing scores.
+  -The charter schools have a 90% overall passing rate and the district schools have a 54% overall passing rate.
+
+
+## Summary:
+ 
+-District Analysis - There was little to no impact on the district summary after the removal of grades.
+-Top School Ranking - Although Thomas High School scores did change, there was no change to the top school rankings.
+-Scores by School Size -the smaller schools have better paasing scores than the larger schools.
+-Scores by School Type - the charter schools are out performing the district  schools.
